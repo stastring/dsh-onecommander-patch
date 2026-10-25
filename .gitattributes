@@ -1,0 +1,15 @@
+# Keep the Windows launchers and PowerShell scripts usable no matter how the
+# clone is configured: cmd.exe and Windows PowerShell expect CRLF here.
+* text=auto
+
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+*.mjs   text  eol=lf
+*.md    text  eol=lf
+*.json  text  eol=lf
+.gitignore text eol=lf
+LICENSE    text eol=lf
+
+# Never let a vendor archive or a local install tree reach a commit.
+*.asar     binary
+resources/ export-ignore

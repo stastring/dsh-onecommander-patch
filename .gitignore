@@ -1,0 +1,32 @@
+# Never ship (or commit) the vendor archive, its backups, or an installed copy:
+# app.asar contains DeepSeek's proprietary build, and the pristine backup is a
+# byte-for-byte copy of it.
+
+# DeepSeek Harness archives and backups
+app.asar
+app.asar.*
+*.asar
+*.asar.unpacked/
+resources/
+app.asar.dsh-pristine
+
+# Local install trees / extracted runtimes
+DeepSeek Harness/
+runtime/
+node_modules/
+
+# Build and verification scratch
+*.rebuilt
+.tmp/
+tmp/
+temp/
+
+# Logs and editor noise
+*.log
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# OS junk
+.DS_Store
